@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="fireworks.css">
+    <link rel="stylesheet" href="gift.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+        .center-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .useFont{
+           font-family: 'Inconsolata', monospace;
+          font-size: 21px;
+          color:white;
+        }
+        .useFont1{
+          font-family: 'Amatic SC', cursive;
+        }
+        .titles{
+          font-family: 'Amatic SC', cursive;
+          /* font-family: 'Dancing Script', cursive; */
+          
+          color:white;
+        }
+
+    
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
+    </style>
+</head>
+<body style="background-image: url('15815.jpg');background-position:center;background-size:cover;">
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+    <audio style="display:none" id= "audio1" controls="controls" >
+      <!-- onloadeddata="setHalfVolume()" -->
+      <source src="hd.mp3"  type="audio/mp3">
+  </audio>
+  <audio style="display:none" id= "audio" controls="controls" >
+      <!-- onloadeddata="setHalfVolume()" -->
+      <source src="audio.mp3"  type="audio/mp3">
+  </audio>
+    <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+    </div>
+    <div class="container center-screen">
+       <div class="row row1 justify-content-center">
+           <div class="col-12">
+            <div class="card p-3 shadow-lg" style="background-image: url('15815.jpg');background-position:center;background-size:cover;border-radius: 15px;" >
+                <div class="row no-gutters">
+                  <div class="col-md-4 py-4">
+                    <img src="ww.gif" class="card-img shadow-lg animate__animated animate__zoomIn animate__delay-2s" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body py-4">
+                      <blockquote class="blockquote text-right useFont animate bounce">
+                        <p id="t_">Since I can’t see you on your birthday this year, I’m sending you this my virtual gift!. Life’s too short to not celebrate every chance you get! Happy Birthday! you’re getting old. AHAHAH :)</p>
+                        <footer class="blockquote-footer text-white">Bmoooo</footer>
+                      </blockquote>
+                      <div class="row">
+                          <div class="col-8 text-center ">
+                            <h1 class="card-title titles hbb" style="font-size: 100px;">Happy Birthday!</h1>
+                          </div>
+                          <div class="col-4 text-center">
+                              <button type="button" class="btn btn-outline-dark next1 mt-5" style="font-size: 14px;">Birthday Message!</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+       </div>
+       <div class="row row2">
+        <div class="col-12">
+         <div class="card p-3 shadow-lg" style="background-image: url('15815.jpg');background-position:center;background-size:cover;border-radius: 15px;">
+             <div class="row no-gutters">
+               <div class="col-md-4 py-4 erningCol">
+              <img src="erning.jpg" class="erningPics card-img animate__animated animate__zoomIn animate__delay-2s" alt="...">
+              <div class="erningVids my-5 text-center">
+                <video controls id="erning_v" width="355" class="mt-5">
+                  <source src="erning.mp4" type="video/mp4">
+                  Sorry, your browser doesn't support embedded videos.
+                </video>
+              </div>
+
+               </div>
+               <div class="col-md-8  py-2 text-center">
+                 <div class="card-body">
+                   <blockquote class="blockquote text-right useFont animate bounce">
+                    <p>My wish for you on your birthday is that you are, and will always be, happy and healthy!</p>
+                    <footer class="blockquote-footer text-white">Erning</footer>
+                  </blockquote>
+                  <div class="row">
+                      <div class="col-8 text-center ">
+                        <h1 class="card-title titles" style="font-size: 80px;">Happy Birthday Ma'am Che!</h1>
+                      </div>
+                      <div class="col-4 text-center">
+                          <button type="button" class="btn btn-outline-dark next2 mt-5" style="font-size: 14px;">Birthday Message!</button>
+                      </div>
+                  </div>
+                 
+                </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+        </div>
+
+        <div class="row row3">
+          <div class="col-12">
+           <div class="card p-3 shadow-lg" style="background-image: url('15815.jpg');background-position:center;background-size:cover;border-radius: 15px;">
+               <div class="row no-gutters">
+                 <div class="col-md-4 py-4 erningCol">
+                <img src="tads.jpg" class="erningPics card-img animate__animated animate__zoomIn animate__delay-2s" alt="...">
+                <div class="erningVids my-5 text-center">
+                  <video controls id="tads_v" width="355" class="mt-5">
+                    <source src="tads.mp4" type="video/mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                  </video>
+                </div>
+  
+                 </div>
+                 <div class="col-md-8  py-2 text-center">
+                   <div class="card-body">
+                     <blockquote class="blockquote text-right useFont animate bounce">
+                      <p>A friend like you is more priceless than the most beautiful diamond. You are not only strong, but kind and thoughtful as well. how grateful I am to have you in my life.!</p>
+                      <footer class="blockquote-footer text-white">Tads</footer>
+                    </blockquote>
+                    <div class="row">
+                        <div class="col-8 text-center ">
+                          <h1 class="card-title titles" style="font-size: 80px;">Happy Birthday Ma'am Che!</h1>
+                        </div>
+                        <div class="col-4 text-center">
+                            <button type="button" class="btn btn-outline-dark next3 mt-5" style="font-size: 14px;">Birthday Message!</button>
+                        </div>
+                    </div>
+                   
+                  </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+          </div>
+
+          <div class="row row4">
+            <div class="col-12">
+             <div class="card p-3 shadow-lg" style="background-image: url('15815.jpg');background-position:center;background-size:cover;border-radius: 15px;">
+                 <div class="row no-gutters">
+                   <div class="col-md-4 py-2 marianCol">
+                  <img src="marian.jpg" class="marianPics card-img animate__animated animate__zoomIn animate__delay-2s" alt="...">
+                  <div class="marianVids text-center">
+                    <video controls id="marian_v" width="200" class="mt-3">
+                      <source src="marian.mp4" type="video/mp4">
+                      Sorry, your browser doesn't support embedded videos.
+                    </video>
+                  </div>
+    
+                   </div>
+                   <div class="col-md-8  py-2 text-center">
+                     <div class="card-body">
+                       <blockquote class="blockquote text-right useFont animate bounce">
+                        <p>Wish you all the greatest things in life, and someone special like you deserves the best</p>
+                        <footer class="blockquote-footer text-white">Marian</footer>
+                      </blockquote>
+                      <div class="row">
+                          <div class="col-8 text-center mt-5">
+                            <h1 class="card-title titles" style="font-size: 80px;">Happy Birthday Che!</h1>
+                            <img src="mr.png" width="350" alt="">
+                          </div>
+                          <div class="col-4 text-center mt-4">
+                              <button type="button" class="btn btn-outline-dark next4 mt-5" style="font-size: 14px;">Birthday Message!</button>
+                          </div>
+                      </div>
+                     
+                    </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+            </div>
+           
+
+            <div class="row row5">
+              <div class="col-md-6 offset-md-3 center-screen">
+                
+                <div class="col-12 mt-5 d-flex justify-content-center">
+                  <div class="box">
+                    <div class="box-body">
+                      <img class="img" src="bcard.png" width="200" data-toggle="modal" data-target="#staticBackdrop">
+                      <div class="box-lid">
+                        
+                        <div class="box-bowtie"></div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <small class="text-dark text-center  mt-2" style="font-size: 10px;">Relax and Enjoy</small>
+                <small class="text-dark text-center" style="font-size: 10px;">Please hover the gift box on lid <br> and click the Photo</small>
+              </div>
+            </div>
+
+            <div class="row row6">
+              <div class="col-md-4 offset-md-4 text-center center-screen">
+                <h1 class="useFont" style="font-size: 25px;">Thank you for your time Che!, I miss you</h1>
+                <small><a href="index.html">Back</a></small>
+              </div>
+            </div>
+
+    </div>
+    
+    </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body body1" style="background-image: url('bcard.png');background-size:cover;height: 550px;background-repeat: no-repeat;">
+        <button type="button" class="btn btn-sm pt-0 pb-0 btn-primary float-right bmoMessage"  style="font-size: 10px;">Bmo's Message (here)</button>
+      </div>
+      <div class="modal-body body2" style="background-image: url('2.png');background-size:cover;height: 550px;background-repeat: no-repeat;">
+        <button type="button" class="btn btn-sm pt-0 pb-0 btn-warning" id="closeNa" data-dismiss="modal" style="font-size: 10px;" >Close</button>
+        <a href="BmoMessage.pdf" download class="btn btn-sm pt-0 pb-0 btn-secondary" style="font-size: 10px;" >Download PDF</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script>
+       function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+      function hb() {
+        var audio1 = document.getElementById("audio1");
+        audio1.play();
+      }
+        let row1=$('.row1').show();
+        let row2=$('.row2').hide();
+        let row3=$('.row3').hide();
+        let row4=$('.row4').hide();
+        let row5=$('.row5').hide();
+        let row6=$('.row6').hide();
+        let next1=$('.next1').hide();
+        let erningPics =$(".erningPics").show();
+        let erningVids =$(".erningVids").hide();
+        let marianPics =$(".marianPics").show();
+        let marianVids =$(".marianVids").hide();
+        let erning_v = document.getElementById("erning_v");
+        let tads_v = document.getElementById("tads_v");
+        let marian_v = document.getElementById("marian_v");
+        $(".next1").on('click',function(){
+            row1.slideUp(1000);
+            row2.slideDown(2000);
+        });
+        $(".next2").on('click',function(){
+            erning_v.pause();
+            row2.slideUp(1000);
+            row3.slideDown(2000);
+            erningPics.show();
+            erningVids.hide();
+            $(".erningCol").removeClass(" bg-dark");
+        });
+        $(".next3").on('click',function(){
+            tads_v.pause();
+            row3.slideUp(1000);
+            row4.slideDown(2000);
+            
+        });
+        $(".next4").on('click',function(){
+            marian_v.pause();
+            row4.slideUp(1000);
+            marianPics.show();
+            marianVids.hide();
+            row5.addClass(" animate__animated animate__zoomIn").slideDown();
+            play();
+        });
+
+        $("#closeNa").on("click", function(){
+          row5.hide();
+          row6.slideDown(3000);
+          $("#staticBackdrop").modal("hide");
+       })
+
+      // setHalfVolume;
+      
+      // function setHalfVolume 
+      //     var myAudio = document.getElementById("audio1");  
+      //     myAudio.volume = 0.1;
+      //
+
+
+      setTimeout(function(){
+        next1.show().addClass("animate__animated animate__bounceIn");
+      },12000);
+
+      function getDuration(src) {
+          return new Promise(function(resolve) {
+              var audio = new Audio();
+              $(audio).on("loadedmetadata", function(){
+                  resolve(audio.duration);
+              });
+              audio.src = src;
+          });
+      }
+    
+      $('.body2').hide(2000);
+      $(".bmoMessage").on('click',function(){
+        $('.body1').slideUp(2000);
+        $('.body2').slideDown(2000);
+      })
+
+      $(".erningPics").click(function(){
+        $(".erningPics").hide();
+        $(".erningCol").addClass(" bg-dark");
+        erningVids.show();
+      })
+
+      $(".marianPics").click(function(){
+        $(".marianPics").hide();
+        $(".marianCol").addClass(" bg-dark");
+        marianVids.show();
+      })
+
+      
+
+      $(window).on('load', function() { // makes sure the whole site is loaded 
+          $('#status').fadeOut(); // will first fade out the loading animation 
+          $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+          //$('body').delay(350).css({'overflow':'visible'});
+          hb();
+        })
+    </script>
+</body>
+</html>
