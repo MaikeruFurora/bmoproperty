@@ -154,10 +154,11 @@
                  <div class="col-md-4 py-4 erningCol">
                 <img src="tads.jpg" class="erningPics card-img animate__animated animate__zoomIn animate__delay-2s" alt="...">
                 <div class="erningVids my-5 text-center">
-                  <video controls id="tads_v" width="355" class="mt-5">
+<!--                   <video controls id="tads_v" width="355" class="mt-5">
                     <source src="tads.mp4" type="video/mp4">
                     Sorry, your browser doesn't support embedded videos.
-                  </video>
+                  </video> -->
+                  <iframe src="https://drive.google.com/file/d/1z3jPTAi32lonVwXDCoWdck2mYhZrD4T6/preview" width="350" height="200" class="mt-5"></iframe>
                 </div>
   
                  </div>
@@ -190,10 +191,11 @@
                    <div class="col-md-4 py-2 marianCol">
                   <img src="marian.jpg" class="marianPics card-img animate__animated animate__zoomIn animate__delay-2s" alt="...">
                   <div class="marianVids text-center">
-                    <video controls id="marian_v" width="200" class="mt-3">
+<!--                     <video controls id="marian_v" width="200" class="mt-3">
                       <source src="marian.mp4" type="video/mp4">
                       Sorry, your browser doesn't support embedded videos.
-                    </video>
+                    </video> -->
+                      <iframe src="https://drive.google.com/file/d/1gIUmu-Q6bAZgKbOrGk0tWDanh-3mAyG-/preview" width="350" height="370" class=""></iframe>
                   </div>
     
                    </div>
@@ -271,108 +273,109 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script>
        function play() {
-        var audio = document.getElementById("audio");
-        audio.play();
-      }
-      function hb() {
-        var audio1 = document.getElementById("audio1");
-        audio1.play();
-      }
-        let row1=$('.row1').show();
-        let row2=$('.row2').hide();
-        let row3=$('.row3').hide();
-        let row4=$('.row4').hide();
-        let row5=$('.row5').hide();
-        let row6=$('.row6').hide();
-        let next1=$('.next1').hide();
-        let erningPics =$(".erningPics").show();
-        let erningVids =$(".erningVids").hide();
-        let marianPics =$(".marianPics").show();
-        let marianVids =$(".marianVids").hide();
-        let erning_v = document.getElementById("erning_v");
-        let tads_v = document.getElementById("tads_v");
-        let marian_v = document.getElementById("marian_v");
-        $(".next1").on('click',function(){
-            row1.slideUp(1000);
-            row2.slideDown(2000);
-        });
-        $(".next2").on('click',function(){
-            erning_v.pause();
-            row2.slideUp(1000);
-            row3.slideDown(2000);
-            erningPics.show();
-            erningVids.hide();
-            $(".erningCol").removeClass(" bg-dark");
-        });
-        $(".next3").on('click',function(){
-            tads_v.pause();
-            row3.slideUp(1000);
-            row4.slideDown(2000);
-            
-        });
-        $(".next4").on('click',function(){
-            marian_v.pause();
-            row4.slideUp(1000);
-            marianPics.show();
-            marianVids.hide();
-            row5.addClass(" animate__animated animate__zoomIn").slideDown();
-            play();
-        });
+    var audio = document.getElementById("audio");
+    audio.play();
+  }
+  function hb() {
+    var audio1 = document.getElementById("audio1");
+    audio1.play();
+  }
+    let row1=$('.row1').hide();
+    let row2=$('.row2').show();
+    let row3=$('.row3').hide();
+    let row4=$('.row4').hide();
+    let row5=$('.row5').hide();
+    let row6=$('.row6').hide();
+    let next1=$('.next1').hide();
+    let erningPics =$(".erningPics").show();
+    let erningVids = $(".erningVids").hide();
+    let tadsPics =$(".tadsPics").show();
+    let tadsVids =$(".tadsVids").hide();
+    let marianPics =$(".marianPics").show();
+    let marianVids =$(".marianVids").hide();
+    let erning_v = document.getElementById("erning_v");
+    let tads_v = document.getElementById("tads_v");
+    let marian_v = document.getElementById("marian_v");
+    $(".next1").on('click',function(){
+        row1.slideUp(1000);
+        row2.slideDown(2000);
+    });
+    $(".next2").on('click',function(){
+        //erning_v.pause();
+        row2.slideUp(1000);
+        row3.slideDown(2000);
+        //erningPics.show();
+        erningVids.hide();
+        $(".erningCol").removeClass(" bg-dark");
+    });
+    $(".next3").on('click',function(){
+        //tads_v.pause();
+        row3.slideUp(1000);
+        row4.slideDown(2000);
+        
+    });
+    $(".next4").on('click',function(){
+        // marian_v.pause();
+        row4.slideUp(1000);
+        marianPics.show();
+        // marianVids.hide();
+        row5.addClass(" animate__animated animate__zoomIn").slideDown();
+        play();
+    });
 
-        $("#closeNa").on("click", function(){
-          row5.hide();
-          row6.slideDown(3000);
-          $("#staticBackdrop").modal("hide");
-       })
-
-      // setHalfVolume;
-      
-      // function setHalfVolume 
-      //     var myAudio = document.getElementById("audio1");  
-      //     myAudio.volume = 0.1;
-      //
+    $("#closeNa").on("click", function(){
+      row5.hide();
+      row6.slideDown(3000);
+      $("#staticBackdrop").modal("hide");
+   })
 
 
-      setTimeout(function(){
-        next1.show().addClass("animate__animated animate__bounceIn");
-      },15000);
+  setTimeout(function(){
+    next1.show().addClass("animate__animated animate__bounceIn");
+  },12000);
 
-      function getDuration(src) {
-          return new Promise(function(resolve) {
-              var audio = new Audio();
-              $(audio).on("loadedmetadata", function(){
-                  resolve(audio.duration);
-              });
-              audio.src = src;
+  function getDuration(src) {
+      return new Promise(function(resolve) {
+          var audio = new Audio();
+          $(audio).on("loadedmetadata", function(){
+              resolve(audio.duration);
           });
-      }
-    
-      $('.body2').hide(2000);
-      $(".bmoMessage").on('click',function(){
-        $('.body1').slideUp(2000);
-        $('.body2').slideDown(2000);
-      })
+          audio.src = src;
+      });
+  }
 
-      $(".erningPics").click(function(){
-        $(".erningPics").hide();
-        $(".erningCol").addClass(" bg-dark");
-        erningVids.show();
-      })
+  $('.body2').hide(2000);
+  $(".bmoMessage").on('click',function(){
+    $('.body1').slideUp(2000);
+    $('.body2').slideDown(2000);
+  })
 
-      $(".marianPics").click(function(){
-        $(".marianPics").hide();
-        $(".marianCol").addClass(" bg-dark");
-        marianVids.show();
-      })
+  $(".erningPics").click(function(){
+    $(".erningPics").hide();
+    $(".erningCol").addClass(" bg-dark");
+    erningVids.show();
+  })
 
-      
+  $(".tadsPics").click(function(){
+    $(".tadsPics").hide();
+    $(".tadsCol").addClass(" bg-dark");
+    tadsVids.show();
+  })
 
-      $(window).on('load', function() { // makes sure the whole site is loaded 
-          $('#status').fadeOut(); // will first fade out the loading animation 
-          $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-          //$('body').delay(350).css({'overflow':'visible'});
-          hb();
-        })
+  $(".marianPics").click(function(){
+    $(".marianPics").hide();
+    $(".marianCol").addClass(" bg-dark");
+    marianVids.show();
+  })
+
+  
+
+  $(window).on('load', function() { // makes sure the whole site is loaded 
+      $('#status').fadeOut(); // will first fade out the loading animation 
+      $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+      //$('body').delay(350).css({'overflow':'visible'});
+      hb();
+    })
     </script>
 </body>
 </html>
