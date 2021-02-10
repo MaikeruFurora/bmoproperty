@@ -265,7 +265,7 @@
     <script>
    function play() {
     const audioCtx = new AudioContext();
-    const aud = new Audio("js/vids/audio/audio.mp3");
+    const aud = new Audio("audio.mp3");
     const source = audioCtx.createMediaElementSource(aud);
     source.connect(audioCtx.destination);
     return aud;
