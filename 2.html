@@ -263,14 +263,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script>
-  function play() {
+   function play() {
     const audioCtx = new AudioContext();
-    const aud = new Audio("audio.mp3");
+    const aud = new Audio("js/vids/audio/audio.mp3");
     const source = audioCtx.createMediaElementSource(aud);
     source.connect(audioCtx.destination);
-    aud.play();
-  }
-   let asaKa = play();
+    return aud;
+}
+let asaKa = play();
+asaKa.pause();
    function hb() {
     const audioCtx = new AudioContext();
     const audiohb = new Audio("hd.mp3");
