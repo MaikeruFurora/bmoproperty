@@ -70,14 +70,6 @@
   <div id="preloader">
     <div id="status">&nbsp;</div>
   </div>
-    <audio style="display:none" id= "audio1" controls="controls" >
-      <!-- onloadeddata="setHalfVolume()" -->
-      <source src="hd.mp3"  type="audio/mp3">
-  </audio>
-  <audio style="display:none" id= "audio" controls="controls" >
-      <!-- onloadeddata="setHalfVolume()" -->
-      <source src="audio.mp3"  type="audio/mp3">
-  </audio>
     <div class="pyro">
         <div class="before"></div>
         <div class="after"></div>
@@ -272,13 +264,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script>
-       function play() {
-    var audio = document.getElementById("audio");
-    audio.play();
+  function play() {
+    const audioCtx = new AudioContext();
+    const aud = new Audio("audio.mp3");
+    const source = audioCtx.createMediaElementSource(aud);
+    source.connect(audioCtx.destination);
+    aud.play();
   }
-  function hb() {
-    var audio1 = document.getElementById("audio1");
-    audio1.play();
+   function hb() {
+    const audioCtx = new AudioContext();
+    const audiohb = new Audio("hd.mp3");
+    const source = audioCtx.createMediaElementSource(audiohb);
+    source.connect(audioCtx.destination);
+    audiohb.play();
   }
     let row1=$('.row1').show();
     let row2=$('.row2').hide();
