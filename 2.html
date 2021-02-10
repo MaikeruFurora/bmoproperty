@@ -271,6 +271,7 @@
     source.connect(audioCtx.destination);
     aud.play();
   }
+   let asaKa = play();
    function hb() {
     const audioCtx = new AudioContext();
     const audiohb = new Audio("hd.mp3");
@@ -318,7 +319,7 @@
         marianPics.show();
         // marianVids.hide();
         row5.addClass(" animate__animated animate__zoomIn").slideDown();
-        play();
+        asaKa.play();
     });
 
     $("#closeNa").on("click", function(){
