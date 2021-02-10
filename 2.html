@@ -272,7 +272,7 @@
             <button type="button" class="btn btn-sm pt-0 pb-0 btn-primary float-right bmoMessage"  style="font-size: 10px;">Bmo's Message (here)</button>
           </div>
           <!-- <div class="modal-body body2" style="background-image: url('https://drive.google.com/uc?export=view&id=1aX5N9j9TZiibUGoFEvrGuouuEGS937Bn');background-size:cover;height: 550px;background-repeat: no-repeat;"> -->
-            <div class="modal-body body2" style="background-image: url('css/img/2.png');background-size:cover;height: 550px;background-repeat: no-repeat;">
+            <div class="modal-body body2" style="background-image: url('2.png');background-size:cover;height: 550px;background-repeat: no-repeat;">
             <button type="button" class="btn btn-sm pt-0 pb-0 btn-warning" id="closeNa" data-dismiss="modal" style="font-size: 10px;" >Close</button>
           </div>
         </div>
@@ -285,7 +285,7 @@
       
   function play() {
     const audioCtx = new AudioContext();
-    const aud = new Audio("js/vids/audio/audio.mp3");
+    const aud = new Audio("audio.mp3");
     const source = audioCtx.createMediaElementSource(aud);
     source.connect(audioCtx.destination);
     return aud;
@@ -294,7 +294,7 @@ let asaKa = play();
 asaKa.pause();
   function hb() {
     const audioCtx = new AudioContext();
-    const audiohb = new Audio("js/vids/audio/hd.mp3");
+    const audiohb = new Audio("hd.mp3");
     const source = audioCtx.createMediaElementSource(audiohb);
     source.connect(audioCtx.destination);
     audiohb.play();
